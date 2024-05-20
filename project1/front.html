@@ -1,1 +1,217 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Text and Images</title>
+  <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Lexend:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        font-family: Arial, sans-serif;
+        background-color: #f5f0e6; /* Background color similar to the images */
+      }
+      
+      .full-screen {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        background-color:  #FFF4DF;
+
+        
+      
+      }
+      #com{
+        position: absolute;
+        left: 40px;
+        top:4%;
+    
+    }
+    #icon{
+        width: 300px;
+    height: 40px;
+    top: 15px;
+    left: 31.78px;
+    gap: 0px;
+    opacity: 0px;
+    transform:rotate( -16 deg);  
+    
+    }
+  
+      
+      .content {
+        text-align: left;
+        font-size: 3em;
+        color: black;
+        position: relative;
+        font-family:Lexend;
+        font-weight: 700;
+        background-color: #FFF4DF;
+
+      }
+      
+      .text-line {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        z-index: 1;
+        margin: 20px 0;
+      }
+      
+      .left {
+        margin-right: 10px;
+      }
+      
+      .moving-text {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .text-line img {
+        width: auto;
+        height: 1em; /* Adjust to fit the text height */
+        vertical-align: middle;
+        position: relative;
+        z-index: -1;
+      }
+      
+      #line1 .moving-text {
+        animation: moveText1 4s infinite alternate;
+      }
+      
+      #line2 .moving-text {
+        animation: moveText2 4s infinite alternate;
+      }
+      
+      #line3 .moving-text {
+        animation: moveText3 4s infinite alternate;
+      }
+      
+      #line4 .moving-text {
+        animation: moveText4 4s infinite alternate;
+      }
+      
+      #line5 .moving-text {
+        animation: moveText5 4s infinite alternate;
+      }
+      
+      @keyframes moveText1 {
+        0% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(-10px);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+      
+      @keyframes moveText2 {
+        0% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(-20px);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+      
+      @keyframes moveText3 {
+        0% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(-15px);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+      
+      @keyframes moveText4 {
+        0% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(-25px);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+      
+      @keyframes moveText5 {
+        0% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(-30px);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+      
+</style>
+</head>
+<body>
+  <div class="full-screen">
+    <span id="com"><img src="images/Astrix Logo.png" alt="icon" id="icon">
+</span>
+    <div class="content">
+      <div class="text-line" id="line1">
+        <span class="left">WE</span>
+        <span class="moving-text"><img src="images/image 143.png" alt="image"> ORGANIZE THE</span>
+      </div>
+      <div class="text-line" id="line2">
+        <span class="left">CONNECTION</span>
+        <span class="moving-text"><img src="images/image 141.png" alt="image"> </span>
+      </div>
+      <div class="text-line" id="line3">
+        <span class="left"></span>
+        <span class="moving-text"><img src="images/image 144.png" alt="image">BETWEEN <img src="images/image 145.png" alt="image"> MUSIC</span>
+      </div>
+      <div class="text-line" id="line4">
+        <span class="left"></span>
+        <span class="moving-text">ARTIST <img src="images/image 147.png" alt="image"> CULTURE <img src="images/image 146.png" alt="image"></span>
+      </div>
+      <div class="text-line" id="line5">
+        <span class="left"></span>
+        <span class="moving-text"><img src="images/image 137.png" alt="image"> ART <img src="images/image 139.png" alt="image"> & COLLECTIONS</span>
+      </div>
+    </div>
+    <div id="btns" style="left: 80%;">
+        <a  id="first" href="index.html" style=" padding-left: 14.2%; padding-right:14.2%;" onmouseover="backgroundd()"> Events</a>
+        <a  id="sec" href="sec.html" style="padding-left: 11%; padding-right:11%;" onmouseover="background()" >Collections</a>
+      </div>
+  </div>
+  <script>
+    function background(){
+        document.getElementById("sec").style.backgroundColor='#484E56';
+    document.getElementById("first").style.backgroundColor ='#282B30';
+    }
+    function backgroundd(){
+        document.getElementById("sec").style.backgroundColor='#282B30';
+        document.getElementById("first").style.backgroundColor='#484E56';
+    }
+  </script>
+</body>
+</html>
